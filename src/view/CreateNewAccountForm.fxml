@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="617.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateNewAccountController">
+   <children>
+      <Label layoutX="92.0" layoutY="14.0" text="Create New Account">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="160.0" text="User Name">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="30.0" layoutY="263.0" prefHeight="26.0" prefWidth="302.0" promptText="Type Your Email" />
+      <Label layoutX="30.0" layoutY="237.0" text="Email">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="31.0" layoutY="190.0" prefHeight="26.0" prefWidth="302.0" promptText="Type Your User Name" />
+      <Label layoutX="31.0" layoutY="318.0" text="New Password">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="425.0" text="Confirm Password">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtNewPassword" layoutX="30.0" layoutY="351.0" prefHeight="26.0" prefWidth="302.0" promptText="Type Your New Password" />
+      <PasswordField fx:id="txtConfirmPassword" layoutX="37.0" layoutY="455.0" onAction="#txtConfirmPasswordOnAction" prefHeight="26.0" prefWidth="302.0" promptText="Confirm Your Password" />
+      <Button layoutX="69.0" layoutY="541.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: green;" text="Register" textFill="#fcf7f7">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblPasswordNotMatched1" layoutX="188.0" layoutY="391.0" text="Password not matched" textFill="#fa0606" />
+      <Label fx:id="lblPasswordNotMatched2" layoutX="188.0" layoutY="492.0" text="Password not matched" textFill="#fc0707" />
+      <Button layoutX="184.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnAddUserOnAction" prefHeight="43.0" prefWidth="156.0" style="-fx-background-color: blue;" text="+Add User" textFill="#faf6f6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblUserID" layoutX="242.0" layoutY="119.0" text="UserID" />
+   </children>
+</AnchorPane>

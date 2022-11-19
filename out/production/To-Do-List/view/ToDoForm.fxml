@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="root" prefHeight="460.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoController">
+   <children>
+      <Label fx:id="lblBanner" layoutX="346.0" layoutY="17.0" text="Hi user, Welcome to ToDoList" />
+      <Label fx:id="lblUserID" layoutX="631.0" layoutY="17.0" text="UserID" />
+      <Button layoutX="346.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" style="-fx-background-color: green;" text="&lt;&lt; Log Out" textFill="#fcf9f9" />
+      <Pane fx:id="subRoot" layoutX="345.0" layoutY="272.0" prefHeight="102.0" prefWidth="315.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="txtDescription" layoutX="14.0" layoutY="26.0" prefHeight="25.0" prefWidth="287.0" promptText="Description" />
+            <Button layoutX="187.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: green;" text="Add to list" textFill="#faf8f8" />
+         </children>
+      </Pane>
+      <Button layoutX="349.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: blue;" text="+ Add New ToDo" textFill="#faf7f7" />
+      <TextField fx:id="txtSelectedToDo" layoutX="344.0" layoutY="57.0" prefHeight="26.0" prefWidth="315.0" />
+      <Button fx:id="btnUpdate" layoutX="567.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: green;" text="Update" textFill="#fcfafa" />
+      <Button fx:id="btnDelete" layoutX="448.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: red;" text="Delete" textFill="#fcfafa" />
+      <ListView fx:id="lstToDo" layoutX="20.0" layoutY="18.0" prefHeight="432.0" prefWidth="298.0" />
+   </children>
+</AnchorPane>
