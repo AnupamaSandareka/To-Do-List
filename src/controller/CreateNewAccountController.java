@@ -115,7 +115,6 @@ public class CreateNewAccountController {
                     preparedStatement.setObject(3, email);
                     preparedStatement.setObject(4, confirmPassword);
                     int i = preparedStatement.executeUpdate();
-                    System.out.println(i);
 
                     if (i > 0) {
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Success..!");
@@ -126,6 +125,7 @@ public class CreateNewAccountController {
                         stage.setScene(scene);
                         stage.setTitle("Login");
                         stage.centerOnScreen();
+                        System.out.println("Created account successfully..");
                     }
                 } catch (SQLException | IOException throwables) {
                     throwables.printStackTrace();
